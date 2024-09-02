@@ -66,59 +66,10 @@ h1 {
 }
 
 .hangman {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 2rem;
-}
-
-.O {
-  max-width: 20px;
-  border: 10px solid black;
-  padding: 40px;
-  border-radius: 50%;
-}
-
-.I {
-  margin-left: 45px;
-  border-left: 10px solid black;
-  height: 100px;
-}
-
-.L {
-  position: absolute;
-  top: 175px;
-  left: 5px;
-  padding: 40px;
-  rotate: 45deg;
-  border-left: 10px solid black;
-}
-
-.L2 {
-  position: absolute;
-  top: 120px;
-  left: 60px;
-  padding: 40px;
-  rotate: -45deg;
-  border-left: 10px solid black;
-}
-
-.I1 {
-  margin-left: 20px;
-  rotate: 25deg;
-  border-left: 10px solid black;
-  height: 100px;
-}
-
-.I2 {
-  position: absolute;
-  top: 220px;
-  left: 45px;
-  margin-left: 20px;
-  rotate: -25deg;
-  border-left: 10px solid black;
-  height: 100px;
+  padding: 2rem 0rem;
 }
 
 /* Words */
@@ -172,4 +123,36 @@ h2 {
 
 .remove {
   display: none;
+}
+
+.display {
+  display: none;
+}
+
+#buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  gap: 1rem;
+}
+
+button {
+  color: black;
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#wordSpotlight {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+}
+
+.resetButton {
+  margin: 2rem 0rem;
 }
