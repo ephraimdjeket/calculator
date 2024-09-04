@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialised;
+  background-color: #002d62;
+  font-family: "Inter", cursive;
+  color: white;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Main Content */
+
+main,
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.main-page {
+  flex-direction: row;
+  gap: 6rem;
+}
+
+.hero-img {
+  border-radius: 25%;
+  height: 220px;
+}
+
+.quiz-content {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  max-width: 600px;
+  text-align: left;
+}
+
+.quiz-content > h1 {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
+
+.quiz-content > p {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.quiz-content > a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 200px;
+  margin-top: 2rem;
+}
+
+.quiz-content > a:hover {
+  background-color: rgb(209, 209, 209);
+}
+
+.form-answer {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-btn {
+  background-color: white;
+  color: black;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.quiz-content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.next-btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 200px;
+  margin-top: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+@media screen and (max-width: 1060px) {
+  main {
+    flex-direction: column;
+  }
+}
