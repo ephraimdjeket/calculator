@@ -11,6 +11,7 @@ const clickHandler = (e) => {
     ?.classList.remove("job-item--active");
   jobItemEl.classList.add("job-item--active");
   jobDetailsContentEl.textContent = "";
+  renderSpinner("job-details");
   spinnerJobDetailsEl.classList.add("spinner--visible");
   const id = jobItemEl.children[0].getAttribute("href");
   fetch(`https://bytegrad.com/course-assets/js/2/api/jobs/${id}`)
@@ -22,6 +23,7 @@ const clickHandler = (e) => {
       return res.json();
     })
     .then((data) => {
+      console.log(data);
       const { jobItem } = data;
       const jobDetailsHTML = `
         <img src="${

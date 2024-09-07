@@ -7,6 +7,8 @@ import {
   errorTextEl,
   errorEl,
 } from "../common.js";
+import renderError from "./Error.js";
+import renderSpinner from "./Spinner.js";
 
 const submitHandler = (e) => {
   e.preventDefault();
@@ -18,15 +20,16 @@ const submitHandler = (e) => {
   const forbiddenPattern = /[0-9]/;
   const patternMatch = forbiddenPattern.test(searchText);
   if (patternMatch) {
-    errorTextEl.textContent = " Your search may not contain Python";
+    errorTextEl.textContent = "Your search may not contain numbers";
     errorEl.classList.add("error--visible");
     setTimeout(() => {
       errorEl.classList.remove("error--visible");
     }, 3500);
+    return;
   }
   searchInputEl.blur();
   jobListSearchEl.textContent = "";
-  spinnerSearchEl.classList.add("spinner--visible");
+  renderSpinner("search");
   fetch(`https://bytegrad.com/course-assets/js/2/api/jobs?search=${searchText}`)
     .then((res) => {
       if (!res.ok) {
